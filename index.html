@@ -1,0 +1,155 @@
+<DOCTYPE html>
+    <html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abenezer's Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
+        <script src="https://kit.fontawesome.com/a4e1227531.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="left">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-text">
+                    <p>FullStack Developer</p>
+                    <h1>Abenezer <span>T</span>. <span>M</span>engesha</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <!--About-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col1">
+                        <img src="./img/me2.jpg" width="220" height="300">
+                    </div>
+                    <div class="col2">
+                        <h2 class="sub-title">About Me</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab " id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Website Development</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021</span><br>Computer Programming at Algonquin Colledge</li>
+                                <li><span>2023</span><br>Bootcamp at Carlton University</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Projects-->
+        <div id="projects">
+            <div class="container">
+                <h2 class="sub-title"> My Projects</h2>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="./img/project1.jpg" width="220" height="300">
+                        <div class="layer">
+                            <h3>Project 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><i class="fa-thin fa-arrow-up-right-from-square"></i></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="./img/project2.jpg" width="220" height="300">
+                        <div class="layer">
+                            <h3>Project 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><i class="fa-thin fa-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="./img/project3.jpg" width="220" height="300">
+                        <div class="layer">
+                            <h3>Project 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><i class="fa-thin fa-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="./img/project4.jpg" width="220" height="300">
+                        <div class="layer">
+                            <h3>Project 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a href="#"><i class="fa-thin fa-link"></i></a>
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="btn">See more</a> -->
+
+                </div>
+            </div>
+
+            <!--Contact-->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-section">
+                            <h3 class="sub-title">Contact Me</h3>
+                            <p>Email: abenezert.mengesha@gmail.com</p>
+                            <p>Cell: 613-600-7507</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove("active-link");
+                    }
+
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove("active-tab");
+                    }
+
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+    </body>
+
+    </html>
